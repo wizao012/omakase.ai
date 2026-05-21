@@ -1,470 +1,328 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P5S89ZGV');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="omakase.ai - AIチャットによるWeb接客で離脱ユーザーを減らし、CVを最大化。初期設計から運用改善まで、まるごと代行。">
-<title>omakase.ai｜AI接客、全部おまかせ。</title>
+<meta name="format-detection" content="telephone=no">
+<title>法人携帯の窓口｜法人限定 iPhone 17e 端末代金1円〜・月額990円〜</title>
+<meta name="description" content="法人・個人事業主向けの携帯電話導入なら法人携帯の窓口へ。iPhone 17eが端末代金1円〜、月額税込990円〜。最短即日発送、初期費用0円、全国対応。30秒で無料見積もり。">
+<meta property="og:title" content="法人携帯の窓口｜法人限定 iPhone 17e">
+<meta property="og:description" content="端末代金1円〜、月額税込990円〜。最短即日発送、初期費用0円、全国対応。">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P5S89ZGV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div class="page-bg">
+<div class="lp-wrapper">
 
-<!-- ========== ヘッダー ========== -->
+<!-- ヘッダー -->
 <header class="header">
-  <div class="header__inner">
-    <a href="#" class="header__logo">
-      <img src="images/logo.png" alt="omakase.ai">
+  <a href="#" class="header-logo-link">
+    <img src="./images/logo.png" alt="法人携帯の窓口" class="header-logo">
+  </a>
+  <div class="header-actions">
+    <!-- 電話アイコン → ポップアップ表示 -->
+    <button type="button" class="header-action header-tel-action" id="headerTelBtn" aria-label="電話で相談する">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="header-action-icon">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span class="header-action-label">お電話で<br>相談</span>
+    </button>
+    <!-- フォームアイコン → フォームセクションへスクロール -->
+    <a href="#contact-form" class="header-action header-form-action js-scroll" aria-label="フォームから無料見積もり">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="header-action-icon">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+        <polyline points="14 2 14 8 20 8"/>
+        <line x1="8" y1="13" x2="16" y2="13"/>
+        <line x1="8" y1="17" x2="13" y2="17"/>
+      </svg>
+      <span class="header-action-label"><span class="header-action-sub">＼30秒で送信／</span>無料見積もり</span>
     </a>
-    <div class="header__right">
-      <a href="#contact" class="btn btn--primary btn--sm">無料トライアル</a>
-    </div>
   </div>
 </header>
 
-<!-- ========== ファーストビュー ========== -->
-<section class="fv">
-  <div class="fv__inner">
-    <div class="fv__text">
-      <span class="fv__tag">AIで成果を生むWeb接客サービス</span>
-      <h1 class="fv__title">AI接客、<br><span class="fv__title-accent">全部おまかせ。</span></h1>
-      <p class="fv__lead">
-        AIチャットによるWeb接客で<br>
-        離脱ユーザーを減らし、CVを最大化。<br>
-        初期設計から運用改善まで、まるごと代行。
-      </p>
-      <ul class="fv__features">
-        <li>
-          <span class="fv__feature-icon"><img src="images/icon_01_yen.png" alt=""></span>
-          <span class="fv__feature-text">1ヶ月無料</span>
-        </li>
-        <li>
-          <span class="fv__feature-icon"><img src="images/icon_02_pencil.png" alt=""></span>
-          <span class="fv__feature-text">シナリオ<br>構築代行</span>
-        </li>
-        <li>
-          <span class="fv__feature-icon"><img src="images/icon_03_headset.png" alt=""></span>
-          <span class="fv__feature-text">導入〜運用まで<br>丸投げOK</span>
-        </li>
-      </ul>
-      <a href="#cta" class="btn btn--primary btn--lg btn--with-arrow">
-        無料トライアルを始める
-        <span class="btn__arrow"><img src="images/icon_20_circle_arrow.png" alt=""></span>
-      </a>
-    </div>
-    <div class="fv__image">
-      <img src="images/fv-pop.png" alt="omakase.aiの接客イメージ">
-    </div>
-  </div>
-</section>
-
-<!-- ========== 実績バナー ========== -->
-<section class="stats">
-  <div class="stats__inner">
-    <div class="stats__item">
-      <img src="images/icon_24_wreath_left.png" alt="" class="stats__wreath stats__wreath--left">
-      <div class="stats__content">
-        <p class="stats__label">導入社数</p>
-        <p class="stats__number"><span class="stats__big">15,000</span>社以上</p>
-        <p class="stats__note">※2025年09月末時点でのリリース数</p>
-      </div>
-      <img src="images/icon_25_wreath_right.png" alt="" class="stats__wreath stats__wreath--right">
-    </div>
-    <div class="stats__item">
-      <img src="images/icon_24_wreath_left.png" alt="" class="stats__wreath stats__wreath--left">
-      <div class="stats__content">
-        <p class="stats__label">導入企業の顧客エンゲージメント</p>
-        <p class="stats__number"><span class="stats__big">25</span>%UP</p>
-        <p class="stats__note">※一部ページにおける実装効果。<br>導入先様のサイト構成や運用方針により異なります。</p>
-      </div>
-      <img src="images/icon_25_wreath_right.png" alt="" class="stats__wreath stats__wreath--right">
-    </div>
-  </div>
-</section>
-
-<!-- ========== 課題提起 ========== -->
-<section class="issues arch">
-  <div class="arch__bottom">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 Q720,80 1440,0 L1440,60 L0,60 Z" fill="#F1F1FB"/>
-    </svg>
-  </div>
-  <h2 class="section-title">こんな課題ありませんか？</h2>
-  <div class="issues__grid">
-    <div class="issue-card">
-      <div class="issue-card__icon"><img src="images/icon_04_door.png" alt=""></div>
-      <p class="issue-card__text">LPからの<br>離脱が多い</p>
-    </div>
-    <div class="issue-card">
-      <div class="issue-card__icon"><img src="images/icon_05_head_question.png" alt=""></div>
-      <p class="issue-card__text">問い合わせ件数が<br>伸びない</p>
-    </div>
-    <div class="issue-card">
-      <div class="issue-card__icon"><img src="images/icon_06_chat.png" alt=""></div>
-      <p class="issue-card__text">チャット導入したが<br>運用できていない</p>
-    </div>
-    <div class="issue-card">
-      <div class="issue-card__icon"><img src="images/icon_07_head_A.png" alt=""></div>
-      <p class="issue-card__text">AIを導入したいが<br>知識がない</p>
-    </div>
-  </div>
-  <div class="issues__solution">
-    <span>omakase.aiなら解決できます！</span>
-    <div class="issues__solution-arrow"></div>
-  </div>
-</section>
-
-<!-- ========== omakase.aiとは ========== -->
-<section class="about arch">
-  <div class="arch__bottom">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 Q720,80 1440,0 L1440,60 L0,60 Z" fill="#FFFFFF"/>
-    </svg>
-  </div>
-  <div class="about__inner">
-    <div class="about__text">
-      <h2 class="about__title">omakase.aiとは</h2>
-      <p class="about__desc">
-        AIがユーザーごとに最適な接客を行い、<br>
-        問い合わせ・予約・購入へ自然に誘導する<br>
-        Web接客サービス。<br>
-        単なるチャットではなく、<br>
-        成果改善を目的とした<br>
-        「CV特化型AI接客」。
-      </p>
-    </div>
-    <div class="about__features">
-      <div class="about-feature">
-        <div class="about-feature__icon"><img src="images/icon_08_headset_24.png" alt=""></div>
-        <p class="about-feature__text">24時間<br>自動接客</p>
-      </div>
-      <div class="about-feature">
-        <div class="about-feature__icon"><img src="images/icon_09_shield.png" alt=""></div>
-        <p class="about-feature__text">離脱防止</p>
-      </div>
-      <div class="about-feature">
-        <div class="about-feature__icon"><img src="images/icon_10_person.png" alt=""></div>
-        <p class="about-feature__text">ユーザーに<br>合わせた提案</p>
-      </div>
-      <div class="about-feature">
-        <div class="about-feature__icon"><img src="images/icon_11_target.png" alt=""></div>
-        <p class="about-feature__text">CV導線<br>最適化</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 選ばれる理由 ========== -->
-<section class="reasons arch">
-  <div class="arch__bottom">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 Q720,80 1440,0 L1440,60 L0,60 Z" fill="#F1F1FB"/>
-    </svg>
-  </div>
-  <h2 class="section-title">omakase.aiが選ばれる理由</h2>
-  <div class="reasons__grid">
-    <div class="reason-card">
-      <span class="reason-card__number">01</span>
-      <div class="reason-card__icon"><img src="images/icon_12_gift.png" alt=""></div>
-      <h3 class="reason-card__title">1ヶ月無料</h3>
-      <p class="reason-card__text">
-        導入ハードルを極限まで下げる、<br>
-        無料でじっくり試せるから、<br>
-        安心して始められます。
-      </p>
-    </div>
-    <div class="reason-card">
-      <span class="reason-card__number">02</span>
-      <div class="reason-card__icon"><img src="images/icon_13_monitor.png" alt=""></div>
-      <h3 class="reason-card__title">初期設定を<br>丸投げできる</h3>
-      <p class="reason-card__text">
-        AI運用で最も大変な<br>
-        シナリオ設計・初期構築を代行。<br>
-        「導入したけど使いこなせない」<br>
-        を防ぎます。
-      </p>
-    </div>
-    <div class="reason-card">
-      <span class="reason-card__number">03</span>
-      <div class="reason-card__icon"><img src="images/icon_14_chart.png" alt=""></div>
-      <h3 class="reason-card__title">改善運用まで対応</h3>
-      <p class="reason-card__text">
-        導入して終わりではなく、<br>
-        CV改善に向けて継続運用、<br>
-        成果が出るまで伴走します。
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ========== できること ========== -->
-<section class="features arch">
-  <div class="arch__bottom">
-    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,0 Q720,80 1440,0 L1440,60 L0,60 Z" fill="#FFFFFF"/>
-    </svg>
-  </div>
-  <h2 class="section-title">できること</h2>
-  <div class="features__grid">
-    <div class="feature-card">
-      <div class="feature-card__icon"><img src="images/icon_06_chat.png" alt=""></div>
-      <p class="feature-card__text">AIチャット接客</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-card__icon"><img src="images/icon_15_document.png" alt=""></div>
-      <p class="feature-card__text">自動ヒアリング</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-card__icon"><img src="images/icon_11_target.png" alt=""></div>
-      <p class="feature-card__text">CV誘導</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-card__icon"><img src="images/icon_09_shield.png" alt=""></div>
-      <p class="feature-card__text">離脱防止</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-card__icon"><img src="images/icon_16_faq.png" alt=""></div>
-      <p class="feature-card__text">FAQ対応</p>
-    </div>
-    <div class="feature-card">
-      <div class="feature-card__icon"><img src="images/icon_14_chart.png" alt=""></div>
-      <p class="feature-card__text">エンゲージメント<br>向上</p>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 導入事例 ========== -->
-<section class="cases">
-  <h2 class="section-title">導入事例</h2>
-  <div class="cases__grid">
-    <article class="case-card">
-      <span class="case-card__tag">化粧品メーカー</span>
-      <div class="case-card__image">
-        <img src="images/dounyu-kesyohin.png" alt="化粧品メーカー">
-      </div>
-      <div class="case-card__stats">
-        <div class="case-stat">
-          <p class="case-stat__label">CVR</p>
-          <p class="case-stat__value">
-            <span class="case-stat__big">123</span><span class="case-stat__unit">%向上</span>
-          </p>
-        </div>
-        <div class="case-stat">
-          <p class="case-stat__label">エンゲージメント</p>
-          <p class="case-stat__value">
-            <span class="case-stat__big">25</span><span class="case-stat__unit">%UP</span>
-          </p>
-        </div>
-        <div class="case-stat">
-          <p class="case-stat__label">直帰率</p>
-          <p class="case-stat__value">
-            <span class="case-stat__big">29</span><span class="case-stat__unit">%改善</span>
-          </p>
-        </div>
-      </div>
-    </article>
-    <article class="case-card">
-      <span class="case-card__tag">小売ECサイトA</span>
-      <div class="case-card__image">
-        <img src="images/dounyu-ecA.png" alt="小売ECサイトA">
-      </div>
-      <div class="case-card__stats">
-        <div class="case-stat">
-          <p class="case-stat__label">平均購入金額</p>
-          <p class="case-stat__value">
-            <span class="case-stat__big">3</span><span class="case-stat__unit">倍</span>
-          </p>
-        </div>
-        <div class="case-stat">
-          <p class="case-stat__label">接客からのCVR</p>
-          <p class="case-stat__value">
-            <span class="case-stat__big">8</span><span class="case-stat__unit">倍</span>
-          </p>
-        </div>
-      </div>
-    </article>
-    <article class="case-card">
-      <span class="case-card__tag">小売ECサイトB</span>
-      <div class="case-card__image">
-        <img src="images/dounyu-ecB.png" alt="小売ECサイトB">
-      </div>
-      <div class="case-card__stats">
-        <div class="case-stat">
-          <p class="case-stat__label">CVR</p>
-          <p class="case-stat__value">
-            <span class="case-stat__big">4</span><span class="case-stat__unit">倍</span>
-          </p>
-        </div>
-        <div class="case-stat">
-          <p class="case-stat__label">サイト滞在時間</p>
-          <p class="case-stat__value">
-            <span class="case-stat__big">9</span><span class="case-stat__unit">倍</span>
-          </p>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-<!-- ========== 導入フロー ========== -->
-<section class="flow">
-  <h2 class="section-title">導入フロー</h2>
-  <div class="flow__grid">
-    <div class="flow-step">
-      <span class="flow-step__number">01</span>
-      <div class="flow-step__icon"><img src="images/icon_18_mail.png" alt=""></div>
-      <p class="flow-step__text">お問い合わせ</p>
-    </div>
-    <div class="flow-step__arrow">▶</div>
-    <div class="flow-step">
-      <span class="flow-step__number">02</span>
-      <div class="flow-step__icon"><img src="images/icon_19_people_chat.png" alt=""></div>
-      <p class="flow-step__text">ヒアリング</p>
-    </div>
-    <div class="flow-step__arrow">▶</div>
-    <div class="flow-step">
-      <span class="flow-step__number">03</span>
-      <div class="flow-step__icon"><img src="images/icon_13_monitor.png" alt=""></div>
-      <p class="flow-step__text">初期設定代行</p>
-    </div>
-    <div class="flow-step__arrow">▶</div>
-    <div class="flow-step">
-      <span class="flow-step__number">04</span>
-      <div class="flow-step__icon"><img src="images/icon_17_rocket.png" alt=""></div>
-      <p class="flow-step__text">公開・運用開始</p>
-    </div>
-  </div>
-</section>
-
-<!-- ========== よくある質問 ========== -->
-<section class="faq">
-  <h2 class="section-title">よくある質問</h2>
-  <div class="faq__list">
-    <details class="faq-item">
-      <summary class="faq-item__question">
-        <span class="faq-item__q">Q</span>
-        <span class="faq-item__text">導入までどのくらいかかりますか？</span>
-        <span class="faq-item__toggle">+</span>
-      </summary>
-      <div class="faq-item__answer">
-        <span class="faq-item__a">A</span>
-        <p>最短2週間程度で導入可能です。内容により前後する場合があります。</p>
-      </div>
-    </details>
-    <details class="faq-item">
-      <summary class="faq-item__question">
-        <span class="faq-item__q">Q</span>
-        <span class="faq-item__text">本当に知識がなくても運用できますか？</span>
-        <span class="faq-item__toggle">+</span>
-      </summary>
-      <div class="faq-item__answer">
-        <span class="faq-item__a">A</span>
-        <p>はい、すべておまかせいただけます。専門知識は不要です。</p>
-      </div>
-    </details>
-  </div>
-</section>
-
-<!-- ========== お問い合わせフォーム ========== -->
-<section class="contact" id="contact">
-  <div class="contact__inner">
-    <h2 class="section-title">まずはお気軽にご相談ください！</h2>
-    <div class="contact__card">
-      <div class="contact__header">
-        <span class="contact__badge">無料</span>
-        <h3 class="contact__title">ご相談フォーム</h3>
-      </div>
-      <form id="contact-form" class="contact__form" novalidate>
-        <div class="form-row">
-          <label class="form-row__label" for="company">会社名／店舗名</label>
-          <input type="text" id="company" name="company" class="form-row__input" placeholder="例）株式会社omakase">
-        </div>
-        <div class="form-row">
-          <label class="form-row__label" for="name">氏名<span class="form-row__req">*</span></label>
-          <input type="text" id="name" name="name" class="form-row__input" placeholder="例）山田 太郎" required>
-        </div>
-        <div class="form-row">
-          <label class="form-row__label" for="tel">電話番号<span class="form-row__req">*</span></label>
-          <input type="tel" id="tel" name="tel" class="form-row__input" placeholder="例）09012345678" required>
-        </div>
-        <div class="form-row">
-          <label class="form-row__label" for="email">メールアドレス<span class="form-row__req">*</span></label>
-          <input type="email" id="email" name="email" class="form-row__input" placeholder="例）info@example.jp" required>
-        </div>
-        <div class="form-row">
-          <label class="form-row__label" for="message">ご相談内容<span class="form-row__req">*</span></label>
-          <textarea id="message" name="message" class="form-row__textarea" placeholder="ご相談内容をご記入ください" required></textarea>
-        </div>
-
-        <div class="form-agree">
-          <p class="form-agree__text">
-            <a href="https://012grp.co.jp/policy" target="_blank" rel="noopener" class="form-agree__link">プライバシーポリシー</a>
-            ・
-            <a href="#" id="terms-link" class="form-agree__link">利用規約</a><button type="button" id="terms-icon" class="form-agree__icon" aria-label="利用規約について">i</button>
-            に同意の上、送信ください。
-          </p>
-          <label class="form-agree__check">
-            <input type="checkbox" id="agree" required>
-            <span>内容に同意する</span>
-          </label>
-        </div>
-
-        <div class="form-note">
-          <p>※ご入力いただいた情報をもとに、お客様の課題解決に最適な企業をご紹介します。</p>
-        </div>
-
-        <div class="form-submit">
-          <button type="submit" class="btn btn--accent btn--lg" id="submit-btn">
-            <span class="btn__text">無料で相談する</span>
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- ========== 利用規約モーダル ========== -->
-<div class="modal" id="terms-modal" aria-hidden="true">
-  <div class="modal__overlay" data-close></div>
-  <div class="modal__content" role="dialog" aria-labelledby="terms-modal-title">
-    <button class="modal__close" data-close aria-label="閉じる">×</button>
-    <h4 id="terms-modal-title" class="modal__title">利用規約について</h4>
-    <p class="modal__body">本サービスでお問い合わせ、資料請求、資料ダウンロードをしていただいた際にご入力頂きました情報は、お問い合わせに対する回答のために利用いたします。また、弊社が取り扱う商品・サービスに関する情報のご案内・商品・サービスのご提供、広告・宣伝・告知などを内容とする電子メール、電話、DM、ハガキ等でのお知らせ等の目的におきましても利用・管理・保管されます。</p>
+<!-- 赤帯マーキー（流れるお知らせ） -->
+<div class="notice-bar" aria-label="お知らせ">
+  <div class="notice-bar-track">
+    <span class="notice-bar-text">法人・個人事業主様限定／お申し込みには各種書類が必要です</span>
+    <span class="notice-bar-text" aria-hidden="true">法人・個人事業主様限定／お申し込みには各種書類が必要です</span>
+    <span class="notice-bar-text" aria-hidden="true">法人・個人事業主様限定／お申し込みには各種書類が必要です</span>
   </div>
 </div>
 
-<!-- ========== フッターCTA ========== -->
-<section class="cta" id="cta">
-  <div class="cta__inner">
-    <div class="cta__text">
-      <h2 class="cta__title">AI活用、全部おまかせ。</h2>
-      <p class="cta__lead">まずは無料トライアルで効果を体験！</p>
-      <a href="#contact" class="btn btn--accent btn--lg">
-        無料トライアルを始める
-      </a>
+<!-- FV -->
+<section class="fv">
+  <!-- 背景画像 -->
+  <img src="./images/fv-bg.png" class="fv-bg" alt="">
+
+  <!-- iPhone本体（背面） -->
+  <img src="./images/iphone.png" class="fv-phone" alt="">
+
+  <!-- メインコピー画像（前面） -->
+  <img src="./images/fv-text.png" class="fv-text" alt="法人限定 iPhone 17e 端末代金1円〜">
+
+  <!-- 月額料金バナー（画像） -->
+  <img src="./images/plan.png" class="monthly-banner" alt="月額料金 900円〜 税込990円〜 複数台ならもっとお値下げ">
+
+  <!-- メインCTA（画像） -->
+  <a href="#contact-form" class="cta-link js-scroll" aria-label="無料見積もりはこちらへ">
+    <img src="./images/cta.png" class="cta-img" alt="30秒でカンタン 無料見積もりはこちら">
+  </a>
+</section>
+
+<!-- 選ばれるポイント -->
+<section class="benefits">
+  <h2 class="benefit-title"><span>選ばれるポイント</span></h2>
+
+  <div class="benefit-main-grid">
+    <div class="benefit-card large">
+      <img class="benefit-icon-large" src="./images/icon-01-truck.png" alt="" loading="lazy">
+      <div class="benefit-small-text">最短</div>
+      <div class="benefit-red">即日発送</div>
     </div>
-    <div class="cta__badge">
-      <img src="images/badge.png" alt="1ヶ月無料で試せる！">
+    <div class="benefit-card large">
+      <div class="benefit-small-text">初期費用</div>
+      <img class="zero-yen-img" src="./images/icon-02-0yen.png" alt="" loading="lazy">
+    </div>
+    <div class="benefit-card large">
+      <img class="benefit-icon-large" src="./images/icon-03-business.png" alt="" loading="lazy">
+      <div class="benefit-small-text">個人事業主でも</div>
+      <div class="benefit-red">OK</div>
+    </div>
+  </div>
+
+  <div class="benefit-sub-grid">
+    <div class="benefit-card small">
+      <img class="benefit-icon-small" src="./images/icon-04-number.png" alt="" loading="lazy">
+      <div class="benefit-sub-title">番号そのまま</div>
+      <div class="benefit-sub-red">引き継ぎOK</div>
+    </div>
+    <div class="benefit-card small">
+      <img class="benefit-icon-small" src="./images/icon-05-online.png" alt="" loading="lazy">
+      <div class="benefit-sub-title">オンラインで<br>申込完了</div>
+    </div>
+    <div class="benefit-card small">
+      <img class="benefit-icon-small" src="./images/icon-06-phone.png" alt="" loading="lazy">
+      <div class="benefit-sub-title">1台からでも<br>OK</div>
+    </div>
+    <div class="benefit-card small">
+      <img class="benefit-icon-small" src="./images/icon-07-shield.png" alt="" loading="lazy">
+      <div class="benefit-sub-title">充実の<br>保証サポート</div>
+    </div>
+    <div class="benefit-card small">
+      <img class="benefit-icon-small" src="./images/icon-08-japan.png" alt="" loading="lazy">
+      <div class="benefit-sub-red">全国対応</div>
     </div>
   </div>
 </section>
 
-<!-- ========== フッター ========== -->
-<footer class="footer">
-  <div class="footer__inner">
-    <img src="images/logo.png" alt="omakase.ai" class="footer__logo">
-    <nav class="footer__nav">
-      <a href="https://012grp.co.jp/company/corporate_profile" target="_blank" rel="noopener">会社概要</a>
-      <a href="https://012grp.co.jp/policy" target="_blank" rel="noopener">プライバシーポリシー</a>
-      <a href="https://012grp.co.jp/cookie" target="_blank" rel="noopener">クッキーポリシー</a>
-      <a href="https://customer.012cloud.jp/" target="_blank" rel="noopener">製品の重説/約款</a>
-    </nav>
-    <p class="footer__copy">&copy; 2025 omakase.ai All Rights Reserved.</p>
-  </div>
+<!-- フォーム -->
+<section class="biz-form-wrap" id="contact-form">
+  <form class="biz-form" id="leadForm" novalidate>
+    <h2>お見積り・お問合せ</h2>
+    <p class="form-lead">必要事項をご入力ください。</p>
+
+    <!-- URLパラメータ追跡（GTM/広告計測用） -->
+    <!-- LPパス（自動判定用） -->
+    <input type="hidden" name="lp_path" id="trk-lp_path">
+    <!-- UTM標準（GA4自動連携） -->
+    <input type="hidden" name="utm_source" id="trk-utm_source">
+    <input type="hidden" name="utm_medium" id="trk-utm_medium">
+    <input type="hidden" name="utm_campaign" id="trk-utm_campaign">
+    <input type="hidden" name="utm_term" id="trk-utm_term">
+    <input type="hidden" name="utm_content" id="trk-utm_content">
+    <!-- 配信面・追加情報 -->
+    <input type="hidden" name="placement" id="trk-placement">
+    <input type="hidden" name="keyword" id="trk-keyword">
+    <input type="hidden" name="matchtype" id="trk-matchtype">
+    <!-- クリックID（オフラインCVインポート用） -->
+    <input type="hidden" name="gclid" id="trk-gclid">
+    <input type="hidden" name="fbclid" id="trk-fbclid">
+    <!-- 独自パラメータ（手動メモ・既存互換） -->
+    <input type="hidden" name="lpv" id="trk-lpv">
+    <input type="hidden" name="src" id="trk-src">
+    <input type="hidden" name="camp" id="trk-camp">
+    <input type="hidden" name="ag" id="trk-ag">
+    <input type="hidden" name="ad" id="trk-ad">
+    <input type="hidden" name="pl" id="trk-pl">
+    <input type="hidden" name="kw" id="trk-kw">
+    <input type="hidden" name="mt" id="trk-mt">
+
+    <div class="form-row">
+      <label for="companyType">会社形態 <span>必須</span></label>
+      <select id="companyType" name="company_type" required>
+        <option value="">選択してください</option>
+        <option value="株式会社">株式会社</option>
+        <option value="有限会社">有限会社</option>
+        <option value="個人事業主">個人事業主</option>
+        <option value="その他営利法人">その他営利法人</option>
+        <option value="その他非営利法人">その他非営利法人</option>
+      </select>
+    </div>
+
+    <!-- 個人事業主向け注意喚起 + 書類確認 -->
+    <div id="soleNotice" class="document-check sole-notice" hidden>
+      <div class="document-check-header">
+        <strong>📋 個人事業主の方へ</strong>
+      </div>
+      <p>通信契約には事業確認が必要なため、下記書類が必須となります。</p>
+      <ul class="document-list">
+        <li>青色申告書 または 開業届の控え</li>
+        <li>本人確認書類</li>
+      </ul>
+      <p class="document-check-question">書類のご準備状況をお選びください</p>
+      <div class="document-check-options">
+        <label class="document-check-radio">
+          <input type="radio" name="doc_check_sole" value="yes" data-allow-submit="true">
+          <span>はい、青色申告書または開業届があります。（またはすぐに準備可能）</span>
+        </label>
+        <label class="document-check-radio">
+          <input type="radio" name="doc_check_sole" value="no" data-allow-submit="false">
+          <span>いいえ、書類はありません。</span>
+        </label>
+      </div>
+      <div class="document-check-deny" data-deny-for="sole" hidden>
+        ※書類のご提示が必須のため、お申し込みをお受けできません。<br>
+        　ご不明点があればお電話にてご相談ください：050-1791-6247
+      </div>
+    </div>
+
+    <!-- 法人系向け書類確認 -->
+    <div id="corpNotice" class="document-check corp-notice" hidden>
+      <div class="document-check-header">
+        <strong>📋 お申し込みに必要な書類</strong>
+      </div>
+      <p>通信契約には法人確認が必要なため、下記書類が必須となります。</p>
+      <ul class="document-list">
+        <li>履歴事項全部証明書（登記簿謄本）</li>
+        <li>本人確認書類</li>
+      </ul>
+      <p class="document-check-question">登記簿謄本のご準備状況をお選びください</p>
+      <div class="document-check-options">
+        <label class="document-check-radio">
+          <input type="radio" name="doc_check_corp" value="yes" data-allow-submit="true">
+          <span>はい、登記簿謄本を取得済です。（またはすぐに準備可能）</span>
+        </label>
+        <label class="document-check-radio">
+          <input type="radio" name="doc_check_corp" value="no" data-allow-submit="false">
+          <span>いいえ、書類はありません。</span>
+        </label>
+      </div>
+      <div class="document-check-deny" data-deny-for="corp" hidden>
+        ※登記簿謄本のご提示が必須のため、お申し込みをお受けできません。<br>
+        　お手元に書類がある場合は、お電話にてご相談ください：050-1791-6247
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="companyName">会社名・屋号 <span>必須</span></label>
+      <input id="companyName" type="text" name="company_name" placeholder="例）〇〇商事 / 〇〇屋" required>
+      <p class="form-error" id="err-companyName"></p>
+    </div>
+
+    <div class="form-row">
+      <label for="contactName">ご担当者名 <span>必須</span></label>
+      <input id="contactName" type="text" name="name" placeholder="例）山田 太郎" required>
+      <p class="form-error" id="err-contactName"></p>
+    </div>
+
+    <div class="form-row">
+      <label for="tel">電話番号 <span>必須</span></label>
+      <input id="tel" type="tel" name="tel" placeholder="例）09012345678" required pattern="[0-9\-]+">
+    </div>
+
+    <div class="form-row">
+      <label for="email">メールアドレス <span>必須</span></label>
+      <input id="email" type="email" name="email" placeholder="例）info@example.com" required>
+    </div>
+
+    <div class="form-row">
+      <label for="prefecture">都道府県 <em>任意</em></label>
+      <select id="prefecture" name="prefecture">
+        <option value="">選択してください</option>
+        <option>北海道</option><option>青森県</option><option>岩手県</option><option>宮城県</option>
+        <option>秋田県</option><option>山形県</option><option>福島県</option><option>茨城県</option>
+        <option>栃木県</option><option>群馬県</option><option>埼玉県</option><option>千葉県</option>
+        <option>東京都</option><option>神奈川県</option><option>新潟県</option><option>富山県</option>
+        <option>石川県</option><option>福井県</option><option>山梨県</option><option>長野県</option>
+        <option>岐阜県</option><option>静岡県</option><option>愛知県</option><option>三重県</option>
+        <option>滋賀県</option><option>京都府</option><option>大阪府</option><option>兵庫県</option>
+        <option>奈良県</option><option>和歌山県</option><option>鳥取県</option><option>島根県</option>
+        <option>岡山県</option><option>広島県</option><option>山口県</option><option>徳島県</option>
+        <option>香川県</option><option>愛媛県</option><option>高知県</option><option>福岡県</option>
+        <option>佐賀県</option><option>長崎県</option><option>熊本県</option><option>大分県</option>
+        <option>宮崎県</option><option>鹿児島県</option><option>沖縄県</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label for="contact_time">ご連絡希望時間 <em>任意</em></label>
+      <select id="contact_time" name="contact_time">
+        <option value="">指定なし</option>
+        <option value="9:00~11:00">9:00～11:00</option>
+        <option value="11:00~13:00">11:00～13:00</option>
+        <option value="13:00~15:00">13:00～15:00</option>
+        <option value="15:00~17:00">15:00～17:00</option>
+        <option value="17:00~19:00">17:00～19:00</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+      <label for="message">お問い合わせ内容 <em>任意</em></label>
+      <textarea id="message" name="message" rows="4" placeholder="ご質問・ご要望などをご入力ください"></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn" id="submitBtn">この内容で送信する</button>
+    <p class="privacy-consent"><a href="https://012grp.co.jp/policy" target="_blank" rel="noopener">プライバシーポリシー</a>に同意の上、送信してください</p>
+    <p class="bottom-note">※個人利用目的でのお申し込みは対象外です。</p>
+  </form>
+</section>
+
+<!-- フッター -->
+<footer class="site-footer">
+  <img src="./images/logo.png" alt="法人携帯の窓口" class="footer-logo">
+  <nav class="footer-nav">
+    <a href="../../company/">会社概要</a>
+    <a href="../../commercial-law/">特定商取引法に基づく表記</a>
+    <a href="https://012grp.co.jp/policy" target="_blank" rel="noopener">プライバシーポリシー</a>
+  </nav>
+  <p class="footer-copy">© 2026 法人携帯の窓口</p>
 </footer>
 
-<script src="js/script.js"></script>
+</div><!-- /.lp-wrapper -->
+</div><!-- /.page-bg -->
+
+<!-- 電話ポップアップモーダル -->
+<div class="modal" id="telModal" hidden aria-modal="true" role="dialog" aria-labelledby="telModalTitle">
+  <div class="modal-overlay" data-close-tel></div>
+  <div class="modal-card modal-card-tel">
+    <button type="button" class="modal-close-x" data-close-tel aria-label="閉じる">×</button>
+    <h3 id="telModalTitle">お電話でのお問い合わせ</h3>
+    <p class="tel-modal-lead">下記より、お気軽にお電話ください。</p>
+    <a href="tel:05017916247" class="tel-modal-cta" id="telModalCta">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      <span class="tel-modal-num">050-1791-6247</span>
+    </a>
+    <p class="tel-modal-hours">営業時間：平日 9:00〜19:00</p>
+  </div>
+</div>
+
+<script src="./js/main.js"></script>
 </body>
 </html>
