@@ -272,42 +272,31 @@ document.addEventListener('DOMContentLoaded', function() {
       const originalText = submitBtn.querySelector('.btn__text').textContent;
       submitBtn.querySelector('.btn__text').textContent = '送信中...';
 
-      // 基本フォーム項目
-      const payload = {
-        company: document.getElementById('company').value.trim(),
-        name: document.getElementById('name').value.trim(),
-        tel: document.getElementById('tel').value.trim(),
-        email: document.getElementById('email').value.trim(),
-        message: document.getElementById('message').value.trim(),
-        submitted_at: new Date().toISOString(),
-        source_url: window.location.href
-      };
-
-      // 計測用 hidden input（URLパラメータ）をpayloadに追加
-      CONFIG.PARAM_KEYS.forEach(function(key) {
-        const el = document.getElementById('trk-' + key);
-        if (el) payload[key] = el.value || '';
-      });
-      // LPパス・リファラも追加
-      const lpPathEl = document.getElementById('trk-lp_path');
-      if (lpPathEl) payload.lp_path = lpPathEl.value || '';
-      const referrerEl = document.getElementById('trk-referrer');
-      if (referrerEl) payload.referrer = referrerEl.value || '';
+      // フォームの全項目（hidden含む）をFormDataで取得
+      // ※name属性のあるinput/textarea/selectが全て自動で入る
+      const formData = new FormData(form);
+      // 補足情報を追加
+      formData.append('submitted_at', new Date().toISOString());
+      formData.append('source_url', window.location.href);
 
       try {
+        // no-corsモードでCORSプリフライト回避
+        // FormDataなのでContent-Typeは自動でmultipart/form-data（simple request扱い）
+        // ※レスポンスは opaque になるが、Zapierには正常に届く
         await fetch(CONFIG.ZAPIER_WEBHOOK_URL, {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+          mode: 'no-cors',
+          body: formData
         });
         // GTM dataLayerへCVイベント送信
         window.dataLayer.push({ event: 'form_submit_cv' });
         window.location.href = CONFIG.THANKS_PAGE;
       } catch (err) {
+        // 真のネットワークエラー時のみ
         console.error('Form submit error:', err);
-        // ネットワークエラー時もCVイベントは発火（no-corsの場合に近い挙動）
-        window.dataLayer.push({ event: 'form_submit_cv' });
-        window.location.href = CONFIG.THANKS_PAGE;
+        submitBtn.disabled = false;
+        submitBtn.querySelector('.btn__text').textContent = originalText;
+        alert('送信に失敗しました。お手数ですが時間をおいて再度お試しください。');
       }
     });
   }
