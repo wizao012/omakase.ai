@@ -1761,9 +1761,10 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
   /* セクションタイトル：SP用デコレーション「\\ XXX /」 */
   .section-title {
-    font-size: 28px;
+    font-size: clamp(20px, 6.4vw, 28px);
     margin-bottom: 32px;
     padding-bottom: 14px;
+    white-space: nowrap;
   }
   .section-title::after {
     width: 40px;
@@ -1835,19 +1836,20 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .fv {
     padding: 24px 20px 32px;
     background: var(--color-bg);
-    overflow: hidden; /* 画像はみ出し対策 */
+    overflow: hidden;
   }
 
-  /* グリッドエリア：リード文非表示に伴いlead行を削除 */
+  /* タイトル＋画像エリア。リード文も左カラムに置き、画像は3行に渡る */
   .fv__inner {
     display: grid;
     grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr);
     grid-template-areas:
       "tag    image"
       "title  image"
+      "lead   image"
       "features features"
       "cta      cta";
-    column-gap: 6px;
+    column-gap: 8px;
     row-gap: 0;
     align-items: start;
   }
@@ -1855,7 +1857,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   /* fv__textの中身をfv__innerのgridに参加させる */
   .fv__text { display: contents; }
 
-  /* タグピル：SPでは一行に収まる語句に切り替え・nowrap */
+  /* タグピル */
   .fv__tag {
     grid-area: tag;
     font-size: 11.5px;
@@ -1869,45 +1871,50 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     letter-spacing: 0.02em;
   }
 
-  /* タイトル：ステンザ間のリズムを調整 */
+  /* タイトル */
   .fv__title {
     grid-area: title;
     font-size: clamp(22px, 7vw, 31px);
     line-height: 1.2;
-    margin-bottom: 24px;
+    margin: 0;
     letter-spacing: 0.005em;
     align-self: start;
     font-weight: 900;
-  }
-  /* ステンザ間余白 */
-  .fv__title-sub::before {
-    content: "";
-    display: block;
-    height: 16px;
   }
   /* ステンザ（1行）は途中で折り返さず、カラムを超えたら記号だけ折り返る */
   .fv__title-accent {
     display: inline-block;
     word-break: keep-all;
   }
-  /* CV改善まで、丸投げ。の前に余白 */
+  /* CV改善まで、丸投げ。の前のステンザ余白を完全に消す
+     (line-heightによる自然な行間のみ残す → 全行が均等な行間に) */
   .fv__title-sub { display: inline; }
   .fv__title-sub::before {
     content: "";
     display: block;
-    height: 22px;
+    height: 0;
   }
 
-  /* リード文:SP版では非表示 */
+  /* リード文（タイトル直下） */
   .fv__lead {
-    display: none;
+    grid-area: lead;
+    font-size: 11px;
+    line-height: 1.8;
+    margin: 12px 0 0;
+    align-self: start;
+    font-weight: 600;
+    color: var(--color-text-sub);
+    letter-spacing: -0.005em;
+    display: block;
   }
+  .fv__lead-pc { display: none; }
+  .fv__lead-sp { display: inline; }
 
-  /* 画像：タイトルブロックに対してひと回り大きめ・右へ軽くずらしバランス出す */
+  /* 画像：縦中央寄せ、テキスト3行ぶんに重ねる */
   .fv__image {
     grid-area: image;
-    margin: 0 -8px 0 0;
-    width: calc(100% + 8px);
+    margin: 0;
+    width: 100%;
     max-width: none;
     align-self: center;
     justify-self: stretch;
@@ -1917,7 +1924,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     position: relative;
     z-index: 1;
   }
-  .fv__image picture { width: 112%; display: block; }
+  .fv__image picture { width: 100%; display: block; }
   .fv__image img {
     width: 100%;
     height: auto;
@@ -1925,10 +1932,10 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     filter: drop-shadow(0 16px 30px rgba(91, 95, 233, 0.18));
   }
 
-  /* 特徴3カード：白背景・横並び3つ */
+  /* 特徴3カード */
   .fv__features {
     grid-area: features;
-    margin: 36px 0 0;
+    margin: 28px 0 0;
     max-width: 100%;
     gap: 10px;
     width: 100%;
@@ -2385,7 +2392,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .cta__title { font-size: 36px; }
 
   /* \u72ed\u3044\u753b\u9762\u3067\u306f\u30bf\u30a4\u30c8\u30eb\u3092\u3055\u3089\u306b\u8a70\u3081\u308b */
-  .fv__title-sub::before { height: 18px; }
+  /* 狭い画面ではタイトルをさらに詰める */
   .fv__features li { min-height: 152px; padding: 18px 6px 16px; }
   .fv__feature-text { font-size: 13px; }
   .fv__feature-sub { font-size: 10px; }
