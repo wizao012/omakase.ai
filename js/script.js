@@ -2,6 +2,45 @@
    omakase.ai LP - script.js (v3: SP対応・ドロワー・Swiper)
    ========================================================================== */
 
+/* ---------- 設定 ---------- */
+const CONFIG = {
+  ZAPIER_WEBHOOK_URL: 'https://hooks.zapier.com/hooks/catch/12525485/4o9e6e9/',
+  THANKS_PAGE: 'thanks.html',
+  // GTM/広告計測用パラメータキー
+  PARAM_KEYS: [
+    // UTM標準パラメータ（GA4自動連携）
+    'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
+    // 配信面・追加情報
+    'placement', 'keyword', 'matchtype',
+    // クリックID（オフラインCVインポート用）
+    'gclid', 'fbclid',
+    // 独自パラメータ（手動メモ・既存互換）
+    'lpv', 'src', 'camp', 'ag', 'ad', 'pl', 'kw', 'mt'
+  ]
+};
+
+/* ---------- GTM dataLayer 初期化 ---------- */
+window.dataLayer = window.dataLayer || [];
+
+/* ---------- URLパラメータをhidden inputへ ---------- */
+(function captureUrlParams() {
+  try {
+    const params = new URLSearchParams(location.search);
+    CONFIG.PARAM_KEYS.forEach(function(key) {
+      const el = document.getElementById('trk-' + key);
+      if (el) el.value = params.get(key) || '';
+    });
+
+    // LPパスを自動取得（サブディレクトリ判定用）
+    const lpPathEl = document.getElementById('trk-lp_path');
+    if (lpPathEl) lpPathEl.value = location.pathname || '';
+
+    // リファラ取得
+    const referrerEl = document.getElementById('trk-referrer');
+    if (referrerEl) referrerEl.value = document.referrer || '';
+  } catch (e) {}
+})();
+
 document.addEventListener('DOMContentLoaded', function() {
 
   // -----------------------------
@@ -233,6 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const originalText = submitBtn.querySelector('.btn__text').textContent;
       submitBtn.querySelector('.btn__text').textContent = '送信中...';
 
+      // 基本フォーム項目
       const payload = {
         company: document.getElementById('company').value.trim(),
         name: document.getElementById('name').value.trim(),
@@ -243,16 +283,31 @@ document.addEventListener('DOMContentLoaded', function() {
         source_url: window.location.href
       };
 
+      // 計測用 hidden input（URLパラメータ）をpayloadに追加
+      CONFIG.PARAM_KEYS.forEach(function(key) {
+        const el = document.getElementById('trk-' + key);
+        if (el) payload[key] = el.value || '';
+      });
+      // LPパス・リファラも追加
+      const lpPathEl = document.getElementById('trk-lp_path');
+      if (lpPathEl) payload.lp_path = lpPathEl.value || '';
+      const referrerEl = document.getElementById('trk-referrer');
+      if (referrerEl) payload.referrer = referrerEl.value || '';
+
       try {
-        await fetch('https://hooks.zapier.com/hooks/catch/12525485/4o9e6e9/', {
+        await fetch(CONFIG.ZAPIER_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload)
         });
-        window.location.href = 'thanks.html';
+        // GTM dataLayerへCVイベント送信
+        window.dataLayer.push({ event: 'form_submit_cv' });
+        window.location.href = CONFIG.THANKS_PAGE;
       } catch (err) {
         console.error('Form submit error:', err);
-        window.location.href = 'thanks.html';
+        // ネットワークエラー時もCVイベントは発火（no-corsの場合に近い挙動）
+        window.dataLayer.push({ event: 'form_submit_cv' });
+        window.location.href = CONFIG.THANKS_PAGE;
       }
     });
   }
