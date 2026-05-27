@@ -375,7 +375,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
    ========================================================================== */
 .fv {
   background: var(--color-bg);
-  padding: 40px 40px 60px;
+  padding: 12px 40px 60px;
   position: relative;
   overflow: hidden;
 }
@@ -734,6 +734,47 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   font-size: 13px;
   font-weight: 700;
   line-height: 1.5;
+}
+
+/* ==========================================================================
+   サービス紹介動画
+   ========================================================================== */
+.video-intro {
+  padding: 100px 40px 100px;
+  background: var(--color-bg);
+}
+.video-intro__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.video-intro__title { line-height: 1.4; }
+.video-intro__lead {
+  display: block;
+  font-size: 0.55em;
+  font-weight: 700;
+  color: var(--color-primary);
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.video-intro__frame {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(91, 95, 233, 0.18);
+  background: #000;
+  position: relative;
+}
+.video-intro__frame iframe {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-intro {
+    padding: 60px 20px 60px;
+  }
+  .video-intro__frame {
+    border-radius: 14px;
+    box-shadow: 0 12px 28px rgba(91, 95, 233, 0.14);
+  }
 }
 
 /* ==========================================================================
