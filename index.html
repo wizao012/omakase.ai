@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="omakase.ai - AIチャットによるWeb接客で離脱ユーザーを減らし、CVを最大化。初期設計から運用改善まで、まるごと代行。">
+<title>omakase.ai｜AI接客、全部おまかせ。</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ========== ヘッダー ========== -->
+<header class="header" id="top">
+  <div class="header__inner">
+    <a href="#top" class="header__logo">
+      <img src="images/logo.png" alt="omakase.ai">
+    </a>
+    <div class="header__right">
+      <a href="#contact" class="btn btn--primary btn--sm">無料トライアル</a>
+      <button class="header__menu" id="menu-btn" aria-label="メニューを開く" aria-expanded="false">
+        <span class="header__menu-bar"></span>
+        <span class="header__menu-bar"></span>
+        <span class="header__menu-bar"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ========== ドロワーメニュー ========== -->
+<nav class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer__overlay" data-drawer-close></div>
+  <div class="drawer__content">
+    <button class="drawer__close" data-drawer-close aria-label="メニューを閉じる">×</button>
+    <ul class="drawer__list">
+      <li><a href="#top" data-drawer-link>HOME</a></li>
+      <li><a href="#cases" data-drawer-link>導入事例</a></li>
+      <li><a href="#flow" data-drawer-link>導入フロー</a></li>
+      <li><a href="#contact" data-drawer-link>お問合せ</a></li>
+      <li><a href="https://012grp.co.jp/company/corporate_profile" target="_blank" rel="noopener">運営会社</a></li>
+      <li><a href="https://012grp.co.jp/policy" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========== ファーストビュー ========== -->
+<section class="fv">
+  <div class="fv__inner">
+    <div class="fv__text">
+      <span class="fv__tag">AIで成果を生むWeb接客サービス</span>
+      <h1 class="fv__title">AI接客、<br><span class="fv__title-accent">全部おまかせ。</span><span class="fv__title-sub"><br>CV改善まで、<br><span class="fv__title-accent">丸投げ。</span></span></h1>
+      <p class="fv__lead">
+        AIチャットによるWeb接客で<br>
+        離脱ユーザーを減らし、CVを最大化。<br>
+        初期設計から運用改善まで、まるごと代行。
+      </p>
+      <ul class="fv__features">
+        <li>
+          <span class="fv__feature-icon"><img src="images/icon_01_yen.png" alt=""></span>
+          <span class="fv__feature-text">1ヶ月無料</span>
+          <span class="fv__feature-sub">まずは気軽に<br>お試しいただけます</span>
+        </li>
+        <li>
+          <span class="fv__feature-icon"><img src="images/icon_02_pencil.png" alt=""></span>
+          <span class="fv__feature-text">シナリオ<br>構築代行</span>
+          <span class="fv__feature-sub">成果に直結する<br>シナリオを設計</span>
+        </li>
+        <li>
+          <span class="fv__feature-icon"><img src="images/icon_03_headset.png" alt=""></span>
+          <span class="fv__feature-text">運用まで<br>丸投げOK</span>
+          <span class="fv__feature-sub">導入後の運用改善まで<br>すべてお任せ</span>
+        </li>
+      </ul>
+      <a href="#contact" class="btn btn--primary btn--lg btn--with-arrow">
+        無料トライアルを始める
+        <span class="btn__arrow"><img src="images/icon_20_circle_arrow.png" alt=""></span>
+      </a>
+    </div>
+    <div class="fv__image">
+      <picture>
+        <source media="(max-width: 767px)" srcset="images/fv-pop-sp.png">
+        <img src="images/fv-pop.png" alt="omakase.aiの接客イメージ">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 実績バナー ========== -->
+<section class="stats">
+  <h2 class="section-title section-title--sp-deco"><span>導入実績</span></h2>
+  <div class="stats__inner">
+    <div class="stats__item">
+      <img src="images/icon_24_wreath_left.png" alt="" class="stats__wreath stats__wreath--left">
+      <div class="stats__content">
+        <p class="stats__label">導入社数</p>
+        <p class="stats__number"><span class="stats__big">15,000</span>社以上</p>
+        <p class="stats__note">※2025年09月末時点でのリリース数</p>
+      </div>
+      <img src="images/icon_25_wreath_right.png" alt="" class="stats__wreath stats__wreath--right">
+    </div>
+    <div class="stats__item">
+      <img src="images/icon_24_wreath_left.png" alt="" class="stats__wreath stats__wreath--left">
+      <div class="stats__content">
+        <p class="stats__label">導入企業の顧客エンゲージメント</p>
+        <p class="stats__number"><span class="stats__big">25</span>%UP</p>
+        <p class="stats__note">※一部ページにおける実装効果。<br>導入先様のサイト構成や運用方針により異なります。</p>
+      </div>
+      <img src="images/icon_25_wreath_right.png" alt="" class="stats__wreath stats__wreath--right">
+    </div>
+  </div>
+</section>
+
+<!-- ========== 課題提起 ========== -->
+<section class="issues arch">
+  <div class="arch__bottom">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 Q720,80 1440,0 L1440,60 L0,60 Z" fill="#F1F1FB"/>
+    </svg>
+  </div>
+  <h2 class="section-title">こんな<span class="section-title__accent">課題</span>ありませんか？</h2>
+  <div class="issues__grid">
+    <div class="issue-card">
+      <div class="issue-card__icon"><img src="images/icon_04_door.png" alt=""></div>
+      <p class="issue-card__text"><strong>LPからの</strong><br><span class="issue-card__text-accent">離脱が多い</span></p>
+    </div>
+    <div class="issue-card">
+      <div class="issue-card__icon"><img src="images/icon_05_head_question.png" alt=""></div>
+      <p class="issue-card__text"><strong>問い合わせが</strong><br><span class="issue-card__text-accent">伸びない</span></p>
+    </div>
+    <div class="issue-card">
+      <div class="issue-card__icon"><img src="images/icon_06_chat.png" alt=""></div>
+      <p class="issue-card__text"><strong>チャット導入したが</strong><br><span class="issue-card__text-accent">運用できていない</span></p>
+    </div>
+    <div class="issue-card">
+      <div class="issue-card__icon"><img src="images/icon_07_head_A.png" alt=""></div>
+      <p class="issue-card__text"><strong>AI導入したいが</strong><br><span class="issue-card__text-accent">知識がない</span></p>
+    </div>
+  </div>
+  <a href="#contact" class="solution-bar">
+    <span class="solution-bar__text">omakase.aiなら<br class="sp-only"><span class="solution-bar__accent">解決</span>できます</span>
+    <span class="solution-bar__arrow">→</span>
+  </a>
+</section>
+
+<!-- ========== omakase.aiとは ========== -->
+<section class="about arch">
+  <div class="arch__bottom">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 Q720,80 1440,0 L1440,60 L0,60 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+  <div class="about__inner">
+    <div class="about__text">
+      <h2 class="about__title">omakase.aiとは</h2>
+      <p class="about__desc">
+        AIがユーザーごとに最適な接客を行い、<br>
+        問い合わせ・予約・購入へ自然に誘導する<br>
+        Web接客サービス。<br>
+        単なるチャットではなく、<br>
+        成果改善を目的とした<br>
+        「CV特化型AI接客」。
+      </p>
+    </div>
+    <div class="about__features">
+      <div class="about-feature">
+        <div class="about-feature__icon"><img src="images/icon_08_headset_24.png" alt=""></div>
+        <p class="about-feature__text">24時間<br>自動接客</p>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature__icon"><img src="images/icon_09_shield.png" alt=""></div>
+        <p class="about-feature__text">離脱防止</p>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature__icon"><img src="images/icon_10_person.png" alt=""></div>
+        <p class="about-feature__text">ユーザーに<br>合わせた提案</p>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature__icon"><img src="images/icon_11_target.png" alt=""></div>
+        <p class="about-feature__text">CV導線<br>最適化</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 選ばれる理由 ========== -->
+<section class="reasons arch">
+  <div class="arch__bottom">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 Q720,80 1440,0 L1440,60 L0,60 Z" fill="#F1F1FB"/>
+    </svg>
+  </div>
+  <h2 class="section-title">なぜomakase.aiが<br class="sp-only"><span class="section-title__accent">選ばれるのか</span></h2>
+  <div class="reasons__grid">
+    <div class="reason-card">
+      <div class="reason-card__header">
+        <span class="reason-card__number">01</span>
+        <span class="reason-card__tag">はじめてでも安心</span>
+      </div>
+      <h3 class="reason-card__title">最大<br><span class="reason-card__title-big">1ヶ月</span>無料</h3>
+      <p class="reason-card__text">
+        まずは無料でお試しいただけます。<br>
+        効果を実感してから本格導入可能。
+      </p>
+      <div class="reason-card__icon"><img src="images/icon_12_gift.png" alt=""></div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-card__header">
+        <span class="reason-card__number">02</span>
+        <span class="reason-card__tag">専門知識は不要</span>
+      </div>
+      <h3 class="reason-card__title"><span class="reason-card__title-big">初期設定</span>を<br><span class="reason-card__title-big">丸投げ</span>できる</h3>
+      <p class="reason-card__text">
+        シナリオ設計から初期設定まで<br>
+        すべてプロが代行。<br>
+        導入しただけで使いこなせないを防ぎます。
+      </p>
+      <div class="reason-card__icon"><img src="images/icon_13_monitor.png" alt=""></div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-card__header">
+        <span class="reason-card__number">03</span>
+        <span class="reason-card__tag">成果につながる運用支援</span>
+      </div>
+      <h3 class="reason-card__title"><span class="reason-card__title-big">改善運用</span>まで<br>対応</h3>
+      <p class="reason-card__text">
+        導入して終わりではなく、<br>
+        データ分析と改善提案で<br>
+        CV改善まで伴走します。
+      </p>
+      <div class="reason-card__icon"><img src="images/icon_14_chart.png" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== できること ========== -->
+<section class="features arch">
+  <div class="arch__bottom">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,0 Q720,80 1440,0 L1440,60 L0,60 Z" fill="#FFFFFF"/>
+    </svg>
+  </div>
+  <h2 class="section-title">できること</h2>
+  <div class="features__grid">
+    <div class="feature-card">
+      <div class="feature-card__icon"><img src="images/icon_06_chat.png" alt=""></div>
+      <p class="feature-card__text">AIチャット接客</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon"><img src="images/icon_15_document.png" alt=""></div>
+      <p class="feature-card__text">自動ヒアリング</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon"><img src="images/icon_11_target.png" alt=""></div>
+      <p class="feature-card__text">CV誘導</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon"><img src="images/icon_09_shield.png" alt=""></div>
+      <p class="feature-card__text">離脱防止</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon"><img src="images/icon_16_faq.png" alt=""></div>
+      <p class="feature-card__text">FAQ対応</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-card__icon"><img src="images/icon_14_chart.png" alt=""></div>
+      <p class="feature-card__text">エンゲージメント<br>向上</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 導入事例 ========== -->
+<section class="cases" id="cases">
+  <h2 class="section-title section-title--sp-deco"><span>導入事例</span></h2>
+
+  <!-- PC: 3カラム / SP: Swiperスライドショー -->
+  <div class="swiper cases__swiper">
+    <div class="swiper-wrapper cases__grid">
+
+      <article class="swiper-slide case-card">
+        <span class="case-card__tag">CASE STUDY</span>
+        <h3 class="case-card__name">化粧品メーカー</h3>
+        <p class="case-card__desc">AIチャットによる最適な商品提案で<br>サイト全体のパフォーマンスが大幅に向上</p>
+        <div class="case-card__image">
+          <img src="images/dounyu-kesyohin.png" alt="化粧品メーカー">
+        </div>
+        <div class="case-card__stats">
+          <div class="case-stat">
+            <p class="case-stat__label">CVR</p>
+            <p class="case-stat__value">
+              <span class="case-stat__big">123</span><span class="case-stat__unit">%向上</span>
+            </p>
+          </div>
+          <div class="case-stat">
+            <p class="case-stat__label">エンゲージメント</p>
+            <p class="case-stat__value">
+              <span class="case-stat__big">25</span><span class="case-stat__unit">%UP</span>
+            </p>
+          </div>
+          <div class="case-stat">
+            <p class="case-stat__label">直帰率</p>
+            <p class="case-stat__value">
+              <span class="case-stat__big">29</span><span class="case-stat__unit">%改善</span>
+            </p>
+          </div>
+        </div>
+        <p class="case-card__note">※一部ページにおける検証結果。導入効果はサイト構成や運用状況により異なります。</p>
+      </article>
+
+      <article class="swiper-slide case-card">
+        <span class="case-card__tag">CASE STUDY</span>
+        <h3 class="case-card__name">小売ECサイトA</h3>
+        <p class="case-card__desc">AIチャットによる最適な商品提案で<br>オンラインストアの売上・購入体験が大幅に向上</p>
+        <div class="case-card__image">
+          <img src="images/dounyu-ecA.png" alt="小売ECサイトA">
+        </div>
+        <div class="case-card__stats">
+          <div class="case-stat">
+            <p class="case-stat__label">平均購入金額</p>
+            <p class="case-stat__value">
+              <span class="case-stat__big">3</span><span class="case-stat__unit">倍</span>
+            </p>
+          </div>
+          <div class="case-stat">
+            <p class="case-stat__label">接客からのCVR</p>
+            <p class="case-stat__value">
+              <span class="case-stat__big">8</span><span class="case-stat__unit">倍</span>
+            </p>
+          </div>
+        </div>
+        <p class="case-card__note">※一部ページにおける検証結果。導入効果はサイト構成や運用状況により異なります。</p>
+      </article>
+
+      <article class="swiper-slide case-card">
+        <span class="case-card__tag">CASE STUDY</span>
+        <h3 class="case-card__name">小売ECサイトB</h3>
+        <p class="case-card__desc">AIチャットによる最適な商品提案で<br>サイト体験が向上し、売上・顧客満足度が大幅に向上</p>
+        <div class="case-card__image">
+          <img src="images/dounyu-ecB.png" alt="小売ECサイトB">
+        </div>
+        <div class="case-card__stats">
+          <div class="case-stat">
+            <p class="case-stat__label">サイトCVR</p>
+            <p class="case-stat__value">
+              <span class="case-stat__big">4</span><span class="case-stat__unit">倍</span>
+            </p>
+          </div>
+          <div class="case-stat">
+            <p class="case-stat__label">サイト滞在時間</p>
+            <p class="case-stat__value">
+              <span class="case-stat__big">9</span><span class="case-stat__unit">倍</span>
+            </p>
+          </div>
+        </div>
+        <p class="case-card__note">※一部ページにおける検証結果。導入効果はサイト構成や運用状況により異なります。</p>
+      </article>
+
+    </div>
+    <!-- スライドショーのドット（SP時のみ表示） -->
+    <div class="swiper-pagination cases__pagination"></div>
+  </div>
+</section>
+
+<!-- ========== 導入フロー ========== -->
+<section class="flow" id="flow">
+  <h2 class="section-title"><span class="section-title__brand">omakase.aiの</span><br class="sp-only"><span class="section-title__accent">導入フロー</span></h2>
+  <div class="flow__grid">
+    <div class="flow-step">
+      <div class="flow-step__head">
+        <span class="flow-step__label">STEP</span>
+        <span class="flow-step__number">01</span>
+      </div>
+      <div class="flow-step__icon"><img src="images/icon_18_mail.png" alt=""></div>
+      <div class="flow-step__body">
+        <p class="flow-step__title">お問い合わせ</p>
+        <p class="flow-step__desc">フォームからお問い合わせください。<br>担当者よりご連絡いたします。</p>
+      </div>
+    </div>
+    <div class="flow-step__arrow"><span>˅</span></div>
+    <div class="flow-step">
+      <div class="flow-step__head">
+        <span class="flow-step__label">STEP</span>
+        <span class="flow-step__number">02</span>
+      </div>
+      <div class="flow-step__icon"><img src="images/icon_19_people_chat.png" alt=""></div>
+      <div class="flow-step__body">
+        <p class="flow-step__title">ヒアリング</p>
+        <p class="flow-step__desc">課題やご要望をお伺いし、<br>最適なご提案をいたします。</p>
+      </div>
+    </div>
+    <div class="flow-step__arrow"><span>˅</span></div>
+    <div class="flow-step">
+      <div class="flow-step__head">
+        <span class="flow-step__label">STEP</span>
+        <span class="flow-step__number">03</span>
+      </div>
+      <div class="flow-step__icon"><img src="images/icon_13_monitor.png" alt=""></div>
+      <div class="flow-step__body">
+        <p class="flow-step__title">初期設定代行</p>
+        <p class="flow-step__desc">ご提案内容に基づき、初期設定を<br>弊社で代行いたします。</p>
+      </div>
+    </div>
+    <div class="flow-step__arrow"><span>˅</span></div>
+    <div class="flow-step">
+      <div class="flow-step__head">
+        <span class="flow-step__label">STEP</span>
+        <span class="flow-step__number">04</span>
+      </div>
+      <div class="flow-step__icon"><img src="images/icon_17_rocket.png" alt=""></div>
+      <div class="flow-step__body">
+        <p class="flow-step__title">公開・運用開始</p>
+        <p class="flow-step__desc">設定完了後、すぐにご利用開始。<br>運用もサポートします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== よくある質問 ========== -->
+<section class="faq">
+  <h2 class="section-title">よくある質問</h2>
+  <div class="faq__list">
+    <details class="faq-item">
+      <summary class="faq-item__question">
+        <span class="faq-item__q">Q</span>
+        <span class="faq-item__text">導入までどのくらいかかりますか？</span>
+        <span class="faq-item__toggle">+</span>
+      </summary>
+      <div class="faq-item__answer">
+        <span class="faq-item__a">A</span>
+        <p>最短2週間程度で導入可能です。内容により前後する場合があります。</p>
+      </div>
+    </details>
+    <details class="faq-item">
+      <summary class="faq-item__question">
+        <span class="faq-item__q">Q</span>
+        <span class="faq-item__text">本当に知識がなくても運用できますか？</span>
+        <span class="faq-item__toggle">+</span>
+      </summary>
+      <div class="faq-item__answer">
+        <span class="faq-item__a">A</span>
+        <p>はい、すべておまかせいただけます。専門知識は不要です。</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ========== お問い合わせフォーム ========== -->
+<section class="contact" id="contact">
+  <div class="contact__inner">
+    <div class="contact__card">
+      <div class="contact__header">
+        <span class="contact__badge">無料</span>
+        <h3 class="contact__title">無料トライアル相談フォーム</h3>
+      </div>
+      <form id="contact-form" class="contact__form" novalidate>
+        <div class="form-row">
+          <label class="form-row__label" for="company">会社名／店舗名</label>
+          <input type="text" id="company" name="company" class="form-row__input" placeholder="例）株式会社omakase">
+        </div>
+        <div class="form-row">
+          <label class="form-row__label" for="name">氏名<span class="form-row__req">*</span></label>
+          <input type="text" id="name" name="name" class="form-row__input" placeholder="例）山田 太郎" required>
+        </div>
+        <div class="form-row">
+          <label class="form-row__label" for="tel">電話番号<span class="form-row__req">*</span></label>
+          <input type="tel" id="tel" name="tel" class="form-row__input" placeholder="例）09012345678" required>
+        </div>
+        <div class="form-row">
+          <label class="form-row__label" for="email">メールアドレス<span class="form-row__req">*</span></label>
+          <input type="email" id="email" name="email" class="form-row__input" placeholder="例）info@example.jp" required>
+        </div>
+        <div class="form-row">
+          <label class="form-row__label" for="message">ご相談内容<span class="form-row__req">*</span></label>
+          <textarea id="message" name="message" class="form-row__textarea" placeholder="ご相談内容をご記入ください" required></textarea>
+        </div>
+
+        <div class="form-agree">
+          <p class="form-agree__text">
+            <a href="https://012grp.co.jp/policy" target="_blank" rel="noopener" class="form-agree__link">プライバシーポリシー</a>
+            ・
+            <a href="#" id="terms-link" class="form-agree__link">利用規約</a><button type="button" id="terms-icon" class="form-agree__icon" aria-label="利用規約について">i</button>
+            に同意の上、送信ください。
+          </p>
+          <label class="form-agree__check">
+            <input type="checkbox" id="agree" required>
+            <span>内容に同意する</span>
+          </label>
+        </div>
+
+        <div class="form-note">
+          <p>※ご入力いただいた情報をもとに、お客様の課題解決に最適な企業をご紹介します。</p>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn--accent btn--lg" id="submit-btn">
+            <span class="btn__text">無料で相談する</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ========== 利用規約モーダル ========== -->
+<div class="modal" id="terms-modal" aria-hidden="true">
+  <div class="modal__overlay" data-close></div>
+  <div class="modal__content" role="dialog" aria-labelledby="terms-modal-title">
+    <button class="modal__close" data-close aria-label="閉じる">×</button>
+    <h4 id="terms-modal-title" class="modal__title">利用規約について</h4>
+    <p class="modal__body">本サービスでお問い合わせ、資料請求、資料ダウンロードをしていただいた際にご入力頂きました情報は、お問い合わせに対する回答のために利用いたします。また、弊社が取り扱う商品・サービスに関する情報のご案内・商品・サービスのご提供、広告・宣伝・告知などを内容とする電子メール、電話、DM、ハガキ等でのお知らせ等の目的におきましても利用・管理・保管されます。</p>
+  </div>
+</div>
+
+<!-- ========== フッター ========== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <img src="images/logo.png" alt="omakase.ai" class="footer__logo">
+    <nav class="footer__nav">
+      <a href="https://012grp.co.jp/company/corporate_profile" target="_blank" rel="noopener">会社概要</a>
+      <a href="https://012grp.co.jp/policy" target="_blank" rel="noopener">プライバシーポリシー</a>
+      <a href="https://012grp.co.jp/cookie" target="_blank" rel="noopener">クッキーポリシー</a>
+      <a href="https://customer.012cloud.jp/" target="_blank" rel="noopener">製品の重説/約款</a>
+    </nav>
+    <p class="footer__copy">&copy; 2025 Wiz Co., Ltd. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
